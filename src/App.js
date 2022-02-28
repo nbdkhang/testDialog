@@ -1,6 +1,4 @@
-import logo from "./logo.svg";
 import React, { useState } from "react";
-import { makeStyles } from "@mui/styles";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
@@ -10,17 +8,8 @@ import Alert from "@mui/material/Alert";
 import Collapse from '@mui/material/Collapse';
 import "./App.css";
 
-const useStyles = makeStyles({
-  dialog_form: {
-    width: "500px",
-  },
-  input: {
-    margin: "10px",
-    padding: "20px",
-  },
-});
+
 function App() {
-  const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [openSuccess, setOpenSuccess] = useState(false);
   const [username, setUsername] = useState("");
@@ -48,7 +37,6 @@ function App() {
         Open Dialog
       </Button>
       <Dialog
-        className={classes.dialog_form}
         open={open}
         onClose={handleClose}
         fullWidth
